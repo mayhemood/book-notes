@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    background: radial-gradient(#b1ddf1 15%, rgba(0,0,0,0) 16%), radial-gradient(#000000 15%, rgba(0,0,0,0) 16%), #fc0;
+  background-position: 0 0, 30px 30px;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 60px 60px;
+}
+
+.box {
+    width: 80%;
+    margin: auto;
+}
+
+.book-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-new-book-section,
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 196, 126, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+.titlename {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; 
+    border-radius: 4px;
+}
+
+.liner {
+    /* width: 30%; */
+    width: 32.93%; 
+    white-space: nowrap; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; 
+    border-radius: 4px;
+}
+
+.update-btn {
+    padding: 10px 15px;
+    background-color: #28a745; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.update-btn:hover {
+    filter: brightness(90%); 
+}
+
+textarea {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    resize: vertical; 
+}
+
+button.submit-btn {
+    background-color: #28a745; 
+}
+
+button.delete-btn {
+    background-color: #dc3545; 
+}
+
+button.edit-btn {
+    background-color: #007bff; 
+}
+
+button {
+    padding: 10px 15px;
+    color: #ffffff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+    filter: brightness(90%); 
+}
+
+h1, h2, h3 {
+    color: #000000; 
+}
+
+p {
+    line-height: 1.6;
+    color: #555555; 
+}
+
+.edit-form,
+.delete-form {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.book {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.abook {
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.book-details {
+    display: flex;
+    background-color: rgba(255, 227, 130, 0.85);
+}
+
+.book-image {
+    flex: 0 0 30%; /* 30% width for the image */
+    padding: 10px;
+}
+
+.cover {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.book-info {
+    flex: 1; 
+    padding: 10px;
+}
+
+h1 {
+    color: #000000;
+}
+
+.book-description {
+    color: #555555;
+}
+
+.rating {
+    color: #007bff;
+}
+
+.delete-form,
+.edit-form {
+    margin-top: 10px;
+}
+
+.delete-btn,
+.edit-btn {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.edit-btn {
+    background-color: #007bff;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+    filter: brightness(90%);
+}
+
+.newheading {
+    text-align: center;
+}
+
+.add-new-book-section {
+    background-color: rgba(255, 173, 132, 0.85);
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-description {
+    text-align: justify;
+}

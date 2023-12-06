@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title and Stylesheet Link -->
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/styles/edit.css">
+</head>
+<body>
+    <!-- Main container -->
+    <div class="box">
+        <!-- Edit Form -->
+        <form class="edit-form" action="/update" method="post">
+            <!-- Hidden input for ISBN -->
+            <input type="hidden" name="isbn" value="<%= bookToEdit.isbn %>">
+            
+            <!-- Input field for Title -->
+            <label for="updatedTitle">Title:</label>
+            <input class="input-field" type="text" name="updatedTitle" id="updatedTitle" placeholder="Title" value="<%= bookToEdit.title %>">
+
+            <!-- Input field for Book ISBN (read-only) -->
+            <label for="updatedIsbn">Book ISBN:</label>
+            <input class="input-field" type="text" name="updatedIsbn" id="updatedIsbn" placeholder="Book ISBN" value="<%= bookToEdit.isbn %>" readonly>
+
+            <!-- Textarea for Description -->
+            <label for="updatedDescription">Description:</label>
+            <textarea class="input-field" name="updatedDescription" id="updatedDescription" placeholder="Description"><%= bookToEdit.description %></textarea>
+
+            <!-- Input field for Rating -->
+            <label for="updatedRating">Rating:</label>
+            <input class="input-field" type="text" name="updatedRating" id="updatedRating" placeholder="Rating" value="<%= bookToEdit.rating %>">
+
+            <!-- Update button -->
+            <button class="update-btn" type="submit" name="update">Update</button>
+        </form>
+    </div>
+</body>
+</html>

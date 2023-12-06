@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; 
+    color: #343a40; 
+    background: radial-gradient(#f6c 15%, rgba(0,0,0,0) 16%), radial-gradient(#6cf 15%, rgba(0,0,0,0) 16%), #fc0;
+  background-position: 0 0, 30px 30px;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 60px 60px;
+}
+
+.box {
+    
+    width: 80%;
+    margin: auto;
+    margin-top: 50px; 
+}
+
+.edit-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 173, 132, 0.85); 
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; 
+    border-radius: 4px;
+    resize: vertical; 
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; 
+    border-radius: 4px;
+    resize: vertical; 
+    height: 150px; 
+}
+
+.update-btn {
+    padding: 10px 15px;
+    background-color: #28a745; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.update-btn:hover {
+    filter: brightness(90%); 
+}

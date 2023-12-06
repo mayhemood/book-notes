@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title and Stylesheet Link -->
+    <title>Book</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <!-- Main container -->
+    <div class="box">
+        <!-- Add a New Book Section -->
+        <div class="add-new-book-section">
+            <!-- Heading for Adding a New Book -->
+            <h1 class="newheading">Add A New Book</h1>
+
+            <!-- Form for Adding a New Book -->
+            <div class="book-form">
+                <form class="edit-form" action="/add" method="post">
+                    <!-- Input fields for Title, Description, ISBN, Rating -->
+                    <input class="input-field titlename" type="text" name="newTitle" placeholder="Title">
+                    <textarea class="search btn btn-light" name="newDescription" placeholder="Description" autocomplete="off"></textarea>
+                    <input class="input-field liner" type="text" name="newIsbn" placeholder="Book ISBN" autocomplete="off">                
+                    <input class="input-field liner" type="text" name="newRating" placeholder="Rating" autocomplete="off">
+                    <!-- Submit button -->
+                    <button class="btn submit-btn liner" type="submit" name="list">Submit</button>
+                </form>   
+            </div>
+        </div>
+
+        <!-- Container for List of Books -->
+        <div class="container">
+            <!-- Heading for List of Books -->
+            <h1 class="newheading">List of Books</h1>
+            <!-- Ordered list for displaying books -->
+            <ol>
+                <!-- Loop through each book item -->
+                <% for (let book of bookItems) { %>
+                    <div class="abook">
+                        <!-- Book Details Container -->
+                        <div class="book-details">
+                            <!-- Left side: Book Image -->
+                            <div class="book-image">
+                                <!-- Book Cover Image -->
+                                <img class="cover" src="https://covers.openlibrary.org/b/isbn/<%=book.isbn%>-M.jpg" alt="Book Cover of <%=book.title%>"/>
+                            </div>
+                            
+                            <!-- Right side: Description, Rating, Delete, Edit -->
+                            <div class="book-info">
+                                <!-- Book Title -->
+                                <h2><%=book.title%></h2>
+                                <!-- Book Description -->
+                                <p class="book-description"><%=book.description%></p>
+                                <!-- Book Rating -->
+                                <p class="rating" name="newRating">Rating: <%=book.rating%></p>
+                
+                                <!-- Delete a book -->
+                                <form action="/delete" method="post" class="delete-form">
+                                    <!-- Hidden input for ISBN -->
+                                    <input type="hidden" name="isbn" value="<%= book.isbn %>">
+                                    <!-- Delete button -->
+                                    <button class="delete-btn" type="submit" name="delete">Delete</button>
+                                </form>
+                
+                                <!-- Edit a book -->
+                                <form action="/edit" method="get" class="edit-form">
+                                    <!-- Hidden input for ISBN -->
+                                    <input type="hidden" name="isbn" value="<%= book.isbn %>">
+                                    <!-- Edit button -->
+                                    <button class="edit-btn" type="submit">Edit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
